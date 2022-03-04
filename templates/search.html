@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block content %}
+    <h1>search results</h2>
+    {% for rentIn in rentIn %}
+    <div class="row">
+      <div class="col-md-8">
+        <article class="media content-section">
+            <div class="article-metadata">
+              <a class="mr-2" href="#">{{ rentIn.author }}</a>
+              <img class="rounded" alt="Cinque Terre" src="{{ rentIn.author.profile.image.url }}" height="30px" width="30px">
+            </div>
+          <h1><a class="article-title" href="{% url 'rentIn-detail' rentIn.id %}">{{ rentIn.name }}</a></h1>
+          <div class="new">
+            <small class="text-muted"> Posted on {{ rentIn.created|date:"F d, Y" }}</small>
+          </div>  
+          <div class="new2">
+            <small class="text-muted"> Updated  on {{ rentIn.updated|date:"F d, Y" }}</small>
+          </div>  
+          <img  src="{{ rentIn.image.url }}" height="150px" width="150px">
+          <p>{{ rentIn.description }}</p>
+          <div class="columns">
+            <ul class="price">
+              <li class="grey">Price -> {{ rentIn.price }}Rs</li>
+            </ul>
+            <ul class="price">
+              <li class="grey">Quantity -> {{ rentIn.stock }}</li>
+            </ul>
+            <br>
+            <button type="button" class="btn btn-primary"><a style="color: white;" href="{% url 'final' %}">RentIn</a></button>
+          </div>          
+        </article>
+      </div>
+    </div>
+    {% endfor %}
+{% endblock content %}

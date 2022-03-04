@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="row">
+      <div class="col-md-8">
+        <article class="media content-section">
+            <div class="article-metadata">
+              <a class="mr-2" href="#">{{ object.author }}</a>
+              <img class="rounded" alt="Cinque Terre" src="{{ object.author.profile.image.url }}">
+            </div>
+          <h1>{{ object.name }}</h1>
+          <div class="new">
+            <small class="text-muted"> Posted on {{ object.created|date:"F d, Y" }}</small>
+          </div>  
+          <div class="new2">
+            <small class="text-muted"> Updated  on {{ object.updated|date:"F d, Y" }}</small>
+            {% if object.author == user %}
+			        <div>
+                <a class="btn btn-secondary btn-sm mt-1 mb-1 " href="{% url 'rentIn-update' object.id %}">Update</a>
+                <a class="btn btn-danger btn-sm mt-1 mb-1 " href="{% url 'rentIn-delete' object.id %}">Delete</a>   	
+			        </div>
+            {% endif %}  
+          </div>  
+          <img  src="{{ object.image.url }}" height="150px" width="150px">
+          <p>{{ object.description }}</p>
+          <div class="columns">
+            <ul class="price">
+              <li class="grey">Price -> {{ object.price }}Rs</li>
+            </ul>
+            <ul class="price">
+              <li class="grey">Quantity -> {{ object.stock }}</li>
+            </ul>
+          </div>          
+        </article>
+      </div>
+    </div>
+{% endblock content %}
