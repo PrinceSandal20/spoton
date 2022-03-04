@@ -1,0 +1,168 @@
+body{
+  padding:0px;
+  margin:0px;
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+  background-image:  url("bg.jpg");
+}
+.logo{
+  height:70px;
+}
+.navbar{
+
+    width:100%;
+    top:0px;
+    height:80px;
+    background-color:#EEEEEE;
+    z-index:1;
+  }
+
+.links{
+  display:flex;
+  list-style-type:none;
+  align-items:center;
+  justify-content: space-between;
+}
+.right{
+  position:absolute;
+  right:100px;
+  display:flex;
+  align-items:center;
+}
+.right li{
+  padding:10px 20px;
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+
+
+
+
+
+.navbar a:hover {
+  color: #078fcd;
+}
+.navbar a{
+  color: black;
+  text-decoration: none;
+}
+
+/* content */
+
+.box{
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 5%;
+opacity: 0.9;
+  height:1500px;
+  width: 60%;
+  background-color: white;
+
+}
+.product{
+  height: 400px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 30% 70%;
+  grid-template-rows: 70px 70px;
+  grid-gap: 20px;
+}
+    .products {
+      height: 250px;
+      width: 250px;
+
+}
+
+.img {
+  grid-row: 1/-1
+}
+
+
+
+
+
+.product {
+  padding-left: 5%;
+  padding-top: 10%;
+}
+  .dis{
+    margin: 20px;
+  }
+.order{
+  height: 70px;
+  width:400px;
+  text-align: center;
+  align-items: center;
+  background-color: #078fcd;
+}
+
+
+.order a{
+  color: white;
+  text-decoration: none;
+}
+
+/* stars */
+
+.rate {
+    float: left;
+    height: 46px;
+    padding: 0 10px;
+}
+.rate:not(:checked) > input {
+    position:absolute;
+    top:-9999px;
+}
+.rate:not(:checked) > label {
+    float:right;
+    width:1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:30px;
+    color:#ccc;
+}
+.rate:not(:checked) > label:before {
+    content: '★ ';
+}
+.rate > input:checked ~ label {
+    color: #ffc700;
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+    color: #deb217;
+}
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+    color: #c59b08;
+}
+
+.review {
+  margin-left: 5%;
+}
+
+
+.user{
+  margin-left: 5%;
+}
+/* SCROLLBAR */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #EEEEEE;
+}
+
+::-webkit-scrollbar-thumb {
+  background: black;
+
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background:black;
+}
