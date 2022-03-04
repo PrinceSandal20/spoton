@@ -168,3 +168,4 @@ EMAIL_HOST_USER = "princesandal657@gmail.com"
 EMAIL_HOST_PASSWORD = "hwidnjcmxfmntagz"
 #os.environ.get('EMAIL_PASS')
 # Activate Django-Heroku
+django_heroku.settings(locals())
