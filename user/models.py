@@ -2,7 +2,6 @@ from email.policy import default
 from django.db import models
 from django.contrib.auth.models import User
 from PIL import Image
-from sqlalchemy import null, true
 
 class Profile(models.Model):
 	user = models.OneToOneField(User,on_delete=models.CASCADE)
