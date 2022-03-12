@@ -6,7 +6,6 @@ from django.contrib.auth.models import User
 from django.urls import reverse
 from PIL import Image
 from numpy import outer
-from sqlalchemy import null, true
 
 class RentIn(models.Model):
     name = models.CharField(max_length=200,db_index=True)
