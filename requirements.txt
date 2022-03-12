@@ -123,7 +123,6 @@ six==1.16.0
 smmap==5.0.0
 sniffio==1.2.0
 soupsieve==2.3.1
-SQLAlchemy==1.4.29
 sqlparse==0.4.2
 starlette==0.16.0
 telebot==0.0.4
